@@ -1,4 +1,4 @@
-# RAG Application - Nepal Constitution Q&A 
+# RAG Application
 
 A Retrieval-Augmented Generation (RAG) application that enables intelligent question-answering on Nepal's Constitution using LangChain, HuggingFace models, and ChromaDB vector database.
 
