@@ -62,7 +62,7 @@ CHUNK_OVERLAP = 50
 #### Retrieval Settings
 ```python
 TOP_K = 2                           # Number of documents to retrieve
-COLLECTION_NAME = "nepal_constitution"
+COLLECTION_NAME = "nepal_constitution" #Custom collection name for your local pdf data
 ```
 
 ## Usage
