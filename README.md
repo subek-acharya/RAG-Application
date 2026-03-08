@@ -1,4 +1,4 @@
-# RAG Application
+# RAG Application 
 
 A Retrieval-Augmented Generation (RAG) application that enables intelligent question-answering on user document using LangChain, HuggingFace models, and ChromaDB vector database.
 
@@ -45,7 +45,7 @@ RAG_APPLICATION/
 ```
 
 ## Configuration
-
+Update settings in `config.py`:
 #### Model Settings
 ```python
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
@@ -64,6 +64,12 @@ CHUNK_OVERLAP = 50
 TOP_K = 2                           # Number of documents to retrieve
 COLLECTION_NAME = "nepal_constitution" #Custom collection name for your local pdf data
 ```
+#### Document Settings
+```python
+# Change this to your PDF filename
+PDF_PATH = os.path.join(DOCUMENTS_DIR, "Constitution_of_Nepal.pdf")
+```
+Note: If using a different PDF, update the filename in config.py
 
 ## Usage
 
