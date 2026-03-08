@@ -39,7 +39,6 @@ RAG_APPLICATION/
 ├── retrieval.py           # RAG chain creation and query handling
 ├── main.py                # Entry point and interactive interface
 ├── utils.py               # Utility functions
-├── test.py                # Testing utilities
 ├── requirements.txt       # Python dependencies
 └── README.md              # This file
 ```
