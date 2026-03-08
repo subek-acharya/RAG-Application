@@ -1,6 +1,6 @@
-# RAG Application 
+# RAG Application - Nepal Constitution Q&A 
 
-A Retrieval-Augmented Generation (RAG) application that enables intelligent question-answering on user document using LangChain, HuggingFace models, and ChromaDB vector database.
+A Retrieval-Augmented Generation (RAG) application that enables intelligent question-answering on Nepal's Constitution using LangChain, HuggingFace models, and ChromaDB vector database.
 
 ## Overview
 
@@ -31,7 +31,7 @@ RAG_APPLICATION/
 │
 ├── data/
 │   ├── documents/
-│   │   └── User_source.pdf    # Source document
+│   │   └── Constitution_of_Nepal.pdf    # Source document
 │   └── chroma_db/                       # Persisted vector store
 │
 ├── config.py              # Configuration settings and paths
@@ -78,4 +78,29 @@ Note: If using a different PDF, update the filename in config.py
 python main.py
 ```
 
+## Sample Output
 
+```bash
+============================================================
+ RETRIEVAL PIPELINE READY
+============================================================
+
+============================================================
+ INTERACTIVE MODE
+============================================================
+Enter your questions about Nepal's Constitution (type 'quit' to exit)
+
+Your question: What is the structure of the federal government?
+
+Answer: The federal government is made up of three levels: the Federation, 
+the State, and the Local level. The main structure of the Federal Democratic 
+Republic of Nepal is of three levels, namely the Federation, the State, and 
+the Local Level.
+
+Your question: Minimum age for marriage in Nepal
+
+Answer: The minimum age for marriage in Nepal is 18 years.
+
+Your question: quit
+Exiting...
+```
