@@ -1,6 +1,5 @@
 """
-Main entry point for the RAG application.
-Nepal Constitution Q&A System
+Main entry point for the RAG application with citations.
 """
 
 import os
@@ -9,7 +8,6 @@ import config
 import utils
 from indexing import run_indexing_pipeline, get_embeddings, load_vector_store
 from retrieval import run_retrieval_pipeline, query
-
 
 def main():
     # Check if vector store already exists
@@ -23,20 +21,20 @@ def main():
         print("Vector store already exists. Skipping indexing.")
     
     # Initialize retrieval pipeline
-    rag_chain, vector_store = run_retrieval_pipeline()
+    rag_chain, parser, vector_store = run_retrieval_pipeline()
     
     # Sample queries to test the system
-    utils.print_separator("TESTING RAG SYSTEM")
+    utils.print_separator("TESTING RAG SYSTEM WITH CITATIONS")
     
     test_questions = [
+        "What is the voting age in Nepal?",
         "What are the fundamental rights mentioned in the constitution?",
         "What is the structure of the federal government?",
-        "What does the constitution say about citizenship?"
     ]
     
     for question in test_questions:
         utils.print_separator()
-        query(rag_chain, question)
+        query(rag_chain, parser, question)
     
     # Interactive mode
     utils.print_separator("INTERACTIVE MODE")
@@ -50,7 +48,7 @@ def main():
             break
         
         if user_question:
-            query(rag_chain, user_question)
+            query(rag_chain,parser, user_question)
 
 
 if __name__ == "__main__":

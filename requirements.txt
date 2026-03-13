@@ -19,3 +19,10 @@ chromadb==1.5.2
 
 # HuggingFace integration
 huggingface_hub==1.6.0
+
+# Reranking (Cohere)
+cohere
+langchain-cohere
+
+# Environment variables
+python-dotenv
