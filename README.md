@@ -17,7 +17,7 @@ This project implements a production-ready RAG pipeline that:
 The system follows a two-phase architecture:
 
 1. **Indexing Pipeline**: PDF → Chunks → Embeddings → Vector Database
-2. **Query Pipeline**: Question → Retrieve → Context + Prompt → LLM → Answer
+2. **Query Pipeline**: Question → Retrieve (Semantic Search + Cohere Reranking) → Context + Prompt → LLM → Answer
 
 ## Technologies Used
 
