@@ -1,4 +1,0 @@
-To Do v2: 
-1. Create v2 branch in git hub and push to v2 branch | V1: Basic RAG Application | V2: RAG with Cohere reranking and citations
-2. Check if new model work with advance parsing, citation and cohere feature.
-3. Launch v3 with Validation with RAGAS
